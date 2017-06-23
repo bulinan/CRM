@@ -1,0 +1,9 @@
+<ul>
+    <li><span class="key">关联客户</span><span class="value">{{this.RELATION.CUSTOMER.NAME}}</span></li>
+    <li><span class="key">创建时间</span><span class="value">{{time this.CREATED}}</span></li>
+    <li><span class="key">预计成交日期</span><span class="value">{{this.DATE_DEAL_PREDICT}}</span></li>
+    <li><span class="key">最后跟进时间</span><span class="value">{{time this.LAST_NOTE_CREATED}}</span></li>
+    <li><span class="key">停留时间</span><span class="value">{{standing this.CREATED}}</span></li>
+    <li><span class="key">预计成交金额</span><span class="value">￥{{this.PRICE}}</span></li>
+    <li><span class="key">销售阶段</span><span class="value">{{state this.STATE this.STATE_TEMPLATE}}</span></li>
+</ul>

@@ -1,0 +1,38 @@
+<div id="component_popup" class="model">
+    <div class="title">
+        <ul class="list"><li>基本资料</li></ul>
+    </div>
+    <div class="content">
+        <div class="operation">
+            <div class="actions button-group">
+                <button class="button" data-method="contract_item.contract_edit_submit">保存</button><button class="button cancel" data-method="bootstrap.component_popup_close">取消</button>
+            </div>
+        </div>
+        <ul>
+            <li><label>合同名称<span class="red">*</span></label><div class="area"><input type="text" name="contract_name" placeHolder="请填写合同名称" value="{{this.NAME}}"></div></li>
+            <li><label>合同编号</label><div class="area"><input type="text" name="contract_number" placeHolder="请填写合同编号" value="{{this.NUMBER}}"></div></li>
+            <li><label>总金额<span class="red">*</span></label><div class="area"><input type="text" name="contract_price" placeHolder="请填写合同总金额" value="{{this.PRICE}}"></div></li>
+            <li data-mark="discount"><label>折扣</label><div class="area"><span class="checkbox"></span>含折扣<span class="discount"><input type="text" name="contract_discount" value="10"  pattern="[0-9]">请输入0-10之间的数字，支1位小数</span></div></li>
+            <li><label>签约日期<span class="red">*</span></label><div class="area"><input class="date" type="text" name="contract_date_signed" data-method="bootstrap.calendar_inner" placeHolder="请选择日期" readonly="readonly" data-date="{{this.DATE_SIGNED}}" value="{{date_convert_word this.DATE_SIGNED}}"></div></li>
+            <li><label>开始日期<span class="red">*</span></label><div class="area"><input class="date" type="text" name="contract_date_start" data-method="bootstrap.calendar_inner" placeHolder="请选择日期" readonly="readonly" data-date="{{this.DATE_START}}" value="{{date_convert_word this.DATE_START}}"></div></li>
+            <li><label>结束日期<span class="red">*</span></label><div class="area"><input class="date" type="text" name="contract_date_end" data-method="bootstrap.calendar_inner" placeHolder="请选择日期" readonly="readonly" data-date="{{this.DATE_END}}" value="{{date_convert_word this.DATE_END}}"></div></li>
+            <li><label>合同负责人</label><div class="area"><input type="text" name="contract_owner" readonly="readonly" value="{{people this.RELATION.OWNER}}"></div></li>
+            <li><label>我方签约人</label><div class="area"><input type="text" name="contract_sign_self" value="{{this.SIGN_SELF}}" placeHolder="请填写我方签约人"></div></li>
+            <li><label>客户签约人<span class="red">*</span></label><div class="area"><input class="date" type="text" name="contract_sign_customer" placeHolder="请填写客户签约人" value="{{this.SIGN_CUSTOMER}}"></div></li>
+        </ul>
+        <ul>
+            <li data-mark="state">
+                <label>状态</label>
+                <div class="area">
+                    <div class="selector">
+                        <div class="selector_title" data-value="{{this.STATE}}"><span class="text"></span><span class="icon-arrow-small-down"></span></div>
+                        <ul class="selector_list"></ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="message">
+            <li><label>备注信息</label><div class="area"><textarea name="contract_remark" placeHolder="请填写备注信息">{{this.REMARK}}</textarea></div></li>
+        </ul>
+    </div>
+</div>

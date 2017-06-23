@@ -1,0 +1,48 @@
+<div id="opportunity_item" class="main scroll">
+    <div class="container">
+        <div class="panel_full">
+            <div class="panel_wrapper">
+                <div class="basic">
+                    <i class="opportunity">Op</i>
+                    <div class="content">
+                        <h1><span></span> @<a href="javascript:;" class="customer" data-method="customer_item.init"></a></h1>
+                        <p>目前由 <a href="javascript:;" class="owner"></a> 负责</p>
+                    </div>
+                    <div class="actions button-group">
+                        {{#is_all this.RELATION.OWNER}}
+                        <a href="javascript:;" data-model="opportunity_item" data-method="bootstrap.owner_change" class="button">变更负责人</a>
+                        <a href="javascript:;" data-method="opportunity_item.opportunity_edit" class="button">修改该数据</a>
+                        <a href="javascript:;" data-model="opportunity_item" data-user="" data-method="bootstrap.data_share" class="button">共享数据</a>
+                        <a href="javascript:;" data-method="opportunity_item.opportunity_cancel" data-mark="{{this.RELATION.VOID}}" class="button cancel">{{void this.RELATION.VOID}}</a>
+                        <a href="javascript:;" data-method="opportunity_item.opportunity_delete" class="button cancel">删除该数据</a>
+                        {{else}}
+                        {{#is_share this.RELATION.SHARE}}
+                            <a href="javascript:;" data-method="opportunity_item.opportunity_edit" class="button">修改该数据</a>
+                        {{else}}
+                            <a href="javascript:;" data-model="opportunity_item" data-method="bootstrap.owner_change" class="button">变更负责人</a>
+                            <a href="javascript:;" data-model="opportunity_item" data-user="" data-method="bootstrap.data_share" class="button">共享数据</a>
+                        {{/is_share}}
+                        {{/is_all}}
+                    </div>
+                </div>
+                <div class="menu">
+                    <ul>
+                        {{#if this.RELATION.VOID}}
+                            <li class="active" data-method="opportunity_item.overview_init" data-void="true"><span>概览</span></li>
+                            <li data-method="opportunity_item.process_init" data-void="true"><span>业务流程</span></li>
+                            <li class="todo" data-method="opportunity_item.todo_init" data-void="true"><span>日程安排</span></li>
+                            <li data-method="opportunity_item.file_init" data-void="true"><span>相关文件</span></li>
+                        {{else}}
+                            <li class="active" data-method="opportunity_item.overview_init"><span>概览</span></li>
+                            <li data-method="opportunity_item.process_init"><span>业务流程</span></li>
+                            <li class="todo" data-method="opportunity_item.todo_init"><span>日程安排</span></li>
+                            <li data-method="opportunity_item.file_init"><span>相关文件</span></li>
+                        {{/if}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="itemSpace"></div>
+    </div>
+</div>
+<div id="component_popup"></div>

@@ -1,0 +1,48 @@
+<div id="customer" class="main scroll">
+    <div class="container">
+        <div class="panel_left">
+            <div class="panel_wrapper">
+                <div class="title">
+                    <a class="button new" href="javascript:;" data-method="customer.customer_new">新建客户</a>
+                    <span class="user" data-user="{{USER_ID}}" data-model="customer" data-method="bootstrap.component_user_filter">{{USER_NAME}}</span>
+                    <span class="filter" data-method="customer.component_customer_filter">筛选</span>
+                </div>
+                <div class="content content_padding_none">
+                    <div class="select_data">
+                        <span class="data">已选中<strong data-mark="component_opportunityList_checkedCount"></strong>条数据（<a href="javascript:;" class="select_all">选中全部<strong data-mark=component_opportunityList_count></strong>条数据</a><a href="javascript:;" class="cancel_all">取消选择全部</a>）</span>
+                        <a href="javascript:;" class="action" data-model="customer">变更负责人</a>
+                    </div>
+                    <table id="dataTables_customer" class="hover row-border" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th><span class="checkbox"></span></th>
+                                <th data-sortName="ORDER[NAME]">名称</th>
+                                <th data-sortName="ORDER[LEVEL]">级别</th>
+                                <th data-sortName="ORDER[OPPORTUNITY]">业务机会</th>
+                                <th>回款总额</th>
+                                <th>负责人</th>
+                                <th data-sortName="ORDER[CREATED]">创建时间</th>
+                                <th data-sortName="ORDER[LAST_NOTE_CREATED]">最后沟通时间</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="loading"><td colspan="8">正在加载...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="panel_right">
+            <div class="panel_wrapper favorite">
+                <div class="title">客户分类</div>
+                <div id="customer_pie" class="content content_padding_head" style="height:200px;">
+                </div>
+            </div>
+            <div class="panel_wrapper favorite">
+                <div class="title">未联系客户</div>
+                <div id="customer_bar" class="content content_padding_head" style="height:200px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<ul class="notes">
+    {{#each this}}
+        <li data-id="{{this.ID}}">
+            <span class="icon"></span>
+            <div class="information">
+                <p class="description"><span>{{this.CONTENT}}</span></p>
+                {{#if this.TASK.length}}
+                    <ul class="tasks">
+                        {{#each this.TASK}}
+                            <li><span class="checkbox selectedDisabled"></span><span class="name">{{this}}</span></li>
+                        {{/each}}
+                    </ul>
+                {{/if}}
+                <p class="creator">{{owner this.RELATION.CREATOR}}</p>
+            </div>
+            <div class="opporation">
+                <span class="time">{{date this.CREATED}}</span>
+                {{#is_auth this.RELATION.OWNER}}
+                    {{#is_stateCurrent this.OPPORTUNITY_STATE}}
+                        <p><a href="javascript:;" data-content="{{transform this}}" data-method="opportunity_item.note_edit">编辑</a><a href="javascript:;" data-method="opportunity_item.note_delete">删除</a></p>
+                    {{else}}
+                    {{/is_stateCurrent}}
+                {{else}}
+                {{/is_auth}}
+            </div>
+        </li>
+    {{/each}}
+</ul>

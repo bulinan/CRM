@@ -1,0 +1,32 @@
+<div class="panel_left top_none">
+    <div class="panel_wrapper event">
+        <div class="title">最近动态</div>
+        <div class="content">
+            <ul></ul>
+        </div>
+    </div>
+</div>
+<div class="panel_right top_none">
+    <div class="panel_wrapper details">
+        <div class="title">机会详情</div>
+        <div class="content content_padding_head">
+        </div>
+    </div>
+    <div class="panel_wrapper person">
+        <div class="title">联系人<a href="javascript:;" data-method="opportunity_item.person_add">添加</a></div>
+        <div class="content content_padding_head">
+        </div>
+    </div>
+    <div class="panel_wrapper product">
+        <div class="title">产品<a href="javascript:;" data-method="opportunity_item.product_add">添加</a></div>
+        <div class="content content_padding_head">
+            {{> products}}
+        </div>
+    </div>
+    <div class="panel_wrapper competitor">
+        <div class="title">竞争对手<a href="javascript:;" data-method="opportunity_item.competitor_add">添加</a></div>
+        <div class="content content_padding_head">
+            {{> competitors}}
+        </div>
+    </div>
+</div>

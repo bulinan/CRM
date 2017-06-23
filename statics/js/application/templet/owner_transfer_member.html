@@ -1,0 +1,9 @@
+{{#each this}}
+    <div class="member" data-id="{{this.ID}}">
+        <img alt="用户头像" src="{{show this.HEAD}}">
+        <div class="information">
+            <p class="name">{{this.NAME}}</p>
+            <p class="title">{{this.TITLE}}</p>
+        </div>
+    </div>
+{{/each}}

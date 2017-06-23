@@ -1,0 +1,44 @@
+<div id="component_popup" class="model" data-id="{{this.ID}}">
+    <div class="title">
+        <ul class="list"><li>基本资料</li></ul>
+    </div>
+    <div class="content">
+        <div class="operation">
+             <div class="actions button-group">
+                <button class="button" data-method="lead_item.lead_edit_submit">保存</button>
+                <button class="button cancel" data-method="bootstrap.component_popup_close">取消</button>
+            </div>
+        </div>
+        <ul>
+            <li><label>姓名<span class="red">*</span></label><div class="area"><input type="text" name="lead_name" value="{{this.NAME}}"></div></li>
+            <li><label>公司名称<span class="red">*</span></label><div class="area"><input type="text" name="lead_company" value="{{this.COMPANY}}"></div></li>
+        </ul>
+        <ul class="contact"></ul>
+        <ul>
+            <li data-mark="level">
+                <label>级别</label>
+                <div class="area">
+                    <div class="selector">
+                        <div class="selector_title" data-value="{{this.LEVEL}}"><span class="text">{{level this.LEVEL}}</span><span class="icon-arrow-small-down"></span></div>
+                        <ul class="selector_list"></ul>
+                    </div>
+                </div>
+            </li>
+            <li data-mark="state">
+                <label>状态</label>
+                <div class="area">
+                    <div class="selector">
+                        <div class="selector_title" data-value="{{this.STATE}}"><span class="text">{{state this.STATE}}</span><span class="icon-arrow-small-down"></span></div>
+                        <ul class="selector_list"></ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul>
+            <li data-mark="owner"><label>负责人</label><div class="area"><span>{{owner this.RELATION.OWNER}}</span></div></li>
+        </ul>
+        <ul class="message">
+            <li><label>备注信息</label><div class="area"><textarea name="lead_remark" placeHolder="请填写备注信息">{{this.REMARK}}</textarea></div></li>
+        </ul>
+    </div>
+</div>

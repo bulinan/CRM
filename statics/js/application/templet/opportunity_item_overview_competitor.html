@@ -1,0 +1,9 @@
+<ul>
+    {{#if this.COMPETITOR.length}}
+        {{#each this.COMPETITOR}}
+            <li data-id="{{this.ID}}"><a href="javascript:;">{{this.NAME}}</a></li>
+        {{/each}}
+        {{else}}
+        <li><p class="empty">当前机会下没有竞争对手，立即<a href="javascript:;" data-method="opportunity_item.competitor_add">添加</a></li>
+    {{/if}}
+</ul>

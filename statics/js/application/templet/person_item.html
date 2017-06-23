@@ -1,0 +1,28 @@
+<div id="person_item" class="main scroll">
+    <div class="container">
+        <div class="panel_full">
+            <div class="panel_wrapper">
+                <div class="basic">
+                    <i class="report">Pe</i>
+                    <div class="content">
+                        <h1><span></span> @<a href="javascript:;" class="customer" data-method="customer_item.init"></a></h1>
+                    </div>
+                    <div class="actions button-group">
+                        {{#is_all this.RELATION.CUSTOMER.OWNER}}
+                        <a href="javascript:;" data-method="person_item.person_edit" class="button">修改该数据</a>
+                        <a href="javascript:;" data-method="person_item.person_delete" class="button cancel">删除该数据</a>
+                        {{else}}
+                        {{/is_all}}
+                    </div>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li class="active" data-method="person_item.overview_init"><span>概览</span></li>
+                        <li class="date" data-method="person_item.date_init"><span>重要日期</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="itemSpace"></div>
+    </div>
+</div>

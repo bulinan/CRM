@@ -1,0 +1,39 @@
+<div id="component_popup" class="model">
+    <div class="title">
+        <ul class="list"><li>基本资料</li></ul>
+    </div>
+    <div class="content">
+        <div class="operation">
+            <div class="actions button-group">
+                <button class="button" data-method="customer_item.contract_new_submit">保存</button>
+                <button class="button cancel" data-method="bootstrap.component_popup_close">取消</button>
+            </div>
+        </div>
+        <ul>
+            <li><label>合同名称<span class="red">*</span></label><div class="area"><input type="text" name="contract_name" placeHolder="请填写合同名称"></div></li>
+            <li><label>合同编号</label><div class="area"><input type="text" name="contract_number" placeHolder="请填写合同编号"></div></li>
+            <li><label>总金额<span class="red">*</span></label><div class="area"><input type="text" name="contract_price" placeHolder="请填写合同总金额"></div></li>
+            <li><label>折扣</label><div class="area"><span class="checkbox"></span>含折扣<span class="discount"><input type="text" name="contract_discount" value="10"  pattern="[0-9]">请输入0-10之间的数字，支持1位小数</span></div></li>
+            <li><label>签约日期<span class="red">*</span></label><div class="area"><input class="date" type="text" name="contract_date_signed" data-method="bootstrap.calendar_inner" placeHolder="请选择日期" readonly="readonly"></div></li>
+            <li><label>开始日期<span class="red">*</span></label><div class="area"><input class="date" type="text" name="contract_date_start" data-method="bootstrap.calendar_inner" placeHolder="请选择日期" readonly="readonly"></div></li>
+            <li><label>结束日期<span class="red">*</span></label><div class="area"><input class="date" type="text" name="contract_date_end" data-method="bootstrap.calendar_inner" placeHolder="请选择日期" readonly="readonly"></div></li>
+            <li><label>合同负责人</label><div class="area"><input type="text" name="contract_owner" readonly="readonly"></div></li>
+            <li><label>我方签约人</label><div class="area"><input type="text" name="contract_sign_self" placeHolder="请填写我方签约人"></div></li>
+            <li><label>客户签约人<span class="red">*</span></label><div class="area"><input class="date" type="text" name="contract_sign_customer" placeHolder="请填写客户签约人"></div></li>
+        </ul>
+        <ul>
+            <li data-mark="state">
+                <label>状态</label>
+                <div class="area">
+                    <div class="selector">
+                        <div class="selector_title"><span class="text"></span><span class="icon-arrow-small-down"></span></div>
+                        <ul class="selector_list"></ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="message">
+            <li><label>备注信息</label><div class="area"><textarea name="contract_remark" placeHolder="请填写备注信息"></textarea></div></li>
+        </ul>
+    </div>
+</div>

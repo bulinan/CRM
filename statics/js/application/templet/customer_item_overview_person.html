@@ -1,0 +1,13 @@
+{{#each this}}
+    <div class="item" data-id="{{this.ID}}" data-method="person_item.init">
+        {{#if this.VERSION.CURRENT.HEAD}}
+            <span class="avatar"><img src="{{this.VERSION.CURRENT.HEAD}}"></span>
+        {{else}}
+            <span class="avatar"></span>
+        {{/if}}
+        <div class="information">
+            <p class="name">{{this.VERSION.CURRENT.NAME}}</p>
+            <p class="title">{{this.VERSION.CURRENT.TITLE}}</p>
+        </div>
+    </div>
+{{/each}}

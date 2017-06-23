@@ -1,0 +1,32 @@
+<div class="panel_full">
+    <div class="panel_wrapper item">
+        <div class="title">成员管理<a href="javascript:;" class="button right new" data-method="settings_system.member_new">添加成员</a></div>
+        <table class="hover row-border dataTable no-footer">
+            <thead><tr><th>名称</th><th>手机</th><th>邮箱</th><th>职位</th><th>所属部门</th><th>角色</th><th>操作</th></tr></thead>
+            <tbody>
+                {{#if this.length}}
+                    {{#each this}}
+                        <tr data-id="{{this.ID}}">
+                            <td class="label_black">{{this.NAME}}</td>
+                            <td>{{this.PHONE}}</td>
+                            <td>{{this.EMAIL}}</td>
+                            <td>{{this.TITLE}}</td>
+                            <td>{{group this.RELATION.GROUP}}</td>
+                            <td>{{charge this.RELATION.GROUP this.ID}}</td>
+                            <td>
+                                <a href="javascript:;" data-method="settings_system.member_edit">编辑</a>
+                                {{#is_block this.BLOCK}}
+                                    <a href="javascript:;" data-block="0" data-method="settings_system.member_block">停用</a>
+                                {{else}}
+                                    <a href="javascript:;" data-block="1" data-method="settings_system.member_block">启动</a>
+                                {{/is_block}}
+                            </td>
+                        </tr>
+                    {{/each}}
+                {{else}}
+                    <tr><td colspan="7" class="empty">当前账户下还没有任何成员</td></tr>
+                {{/if}}
+            </tbody>
+        </table>
+    </div>
+</div>

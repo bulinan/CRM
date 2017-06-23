@@ -1,0 +1,21 @@
+<div id="component_popup" class="model">
+    <div class="title">
+        <ul class="list"><li>基本资料</li></ul>
+    </div>
+    <div class="content">
+        <div class="operation">
+            <div class="actions button-group">
+                <button class="button" data-method="settings_system.account_edit_submit">保存</button>
+                <button class="button cancel" data-method="bootstrap.component_popup_close">取消</button>
+            </div>
+        </div>
+        <ul>
+            <li><label>公司名称<span class="red">*</span></label><div class="area"><input type="text" name="account_name" value="{{ACCOUNT_NAME}}" placeholder="请填写公司名称"></div></li>
+        </ul>
+        <ul>
+            <li><label>用户上限</label><div class="area">{{ACCOUNT_LIMIT}}</div></li>
+            <li><label>目前用户数</label><div class="area">{{ACCOUNT_USERS}}</div></li>
+            <li><label>到期时间</label><div class="area">{{ACCOUNT_EXPIRATION}}</div></li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div data-mark="note_edit">
+    <div class="note_content">
+        <textarea class="textarea" name="note_content" placeHolder="在这里记录有关步骤的信息..."></textarea>
+        <input type="hidden" name="note_id">
+        <input type="hidden" name="note_task">
+    </div>
+    {{#tasks this.TASK}}
+        <ul class="list common">
+            {{#state_current this.TASK}}
+                {{#each this}}
+                    {{#is_completed this}}
+                        <li><span class="checkbox"></span><span class="name">{{this}}</span></li>
+                    {{else}}
+                        <li><span class="checkbox selected" data-value="1"></span><span class="name">{{this}}</span></li>
+                    {{/is_completed}}
+                {{/each}}
+            {{/state_current}}
+        </ul>
+    {{/tasks}}
+    <div class="footer common">
+        <div class="actions button-group">
+            <button class="button" data-abled="true" data-method="opportunity_item.note_edit_submit">修改</button>
+            <button class="button cancel" data-method="opportunity_item.note_edit_close">取消</button>
+        </div>
+    </div>
+</div>

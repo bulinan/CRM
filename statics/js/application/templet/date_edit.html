@@ -1,0 +1,76 @@
+<div id="component_popup">
+    <div class="title">
+        <ul class="list"><li>重要日期</li></ul>
+    </div>
+    <div class="content">
+        <div class="operation">
+            <div class="actions button-group">
+                <button class="button" data-method="">保存</button>
+                <button class="button cancel" data-method="bootstrap.component_popup_close">取消</button>
+            </div>
+        </div>
+        <ul>
+            <li data-mark="class">
+                <label>分类</label>
+                <div class="area">
+                    <div class="selector" data-callback="bootstrap.component_selector_dateClass">
+                        <div class="selector_title"><span class="text"></span><span class="icon-arrow-small-down"></span></div>
+                        <ul class="selector_list">
+                            <!--<li data-value="birthday">生日</li>
+                            <li data-value="offered">受聘</li>
+                            <li data-value="dimission">离职</li>
+                            <li data-value="cooperation">合作</li>
+                            <li data-value="termination">解约</li>
+                            <li data-value="other">其他</li>-->
+                        </ul>
+                    </div>
+                </div>
+                <div class="area other"><input type="text" name="date_class" placeHolder="请填写具体内容"></div>
+            </li>
+            <li>
+                <label>日期</label>
+                <div class="area">
+                    <div class="selector multiple" data-mark="year">
+                        <div class="selector_title"><span class="text"></span><span class="icon-arrow-small-down"></span></div>
+                        <ul class="selector_list"></ul>
+                    </div>
+                    <div class="selector multiple" data-mark="month" data-callback="bootstrap.component_selector_day">
+                        <div class="selector_title"><span class="text"></span><span class="icon-arrow-small-down"></span></div>
+                        <ul class="selector_list">
+                            <li data-value="01">1月</li>
+                            <li data-value="02">2月</li>
+                            <li data-value="03">3月</li>
+                            <li data-value="04">4月</li>
+                            <li data-value="05">5月</li>
+                            <li data-value="06">6月</li>
+                            <li data-value="07">7月</li>
+                            <li data-value="08">8月</li>
+                            <li data-value="09">9月</li>
+                            <li data-value="10">10月</li>
+                            <li data-value="11">11月</li>
+                            <li data-value="12">12月</li>
+                        </ul>
+                    </div>
+                    <div class="selector multiple" data-mark="day">
+                        <div class="selector_title"><span class="text"></span><span class="icon-arrow-small-down"></span></div>
+                        <ul class="selector_list"></ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <label>重复</label>
+                <div class="area">
+                    <div class="selector" data-mark="repeat">
+                        <div class="selector_title" data-value=""><span class="text">不重复</span><span class="icon-arrow-small-down"></span></div>
+                        <ul class="selector_list">
+                            <li data-value="" class="selected">不重复</li>
+                            <li data-value="BY_YEAR">按年重复</li>
+                            <li data-value="BY_MONTH">按月重复</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="area other"><input type="text" name="date_class" placeHolder="请填写具体内容"></div>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+<div id="opportunity" class="main scroll">
+    <div class="container">
+        <div class="panel_left">
+            <div class="panel_wrapper">
+                <div class="title">
+                    {{#is_charge USER_ID}}
+                        <span class="user" data-user="{{USERS}}" data-model="opportunity" data-method="bootstrap.component_user_filter">所有人</span>
+                    {{else}}
+                        <span class="user">{{USER_NAME}}</span>
+                    {{/is_charge}}
+                    <span class="filter" data-method="opportunity.component_opportunity_filter">筛选</span>
+                </div>
+                <div class="content content_padding_none">
+                    <div class="select_data">
+                        <span class="data">已选中<strong data-mark="component_opportunityList_checkedCount"></strong>条数据（<a href="javascript:;" class="select_all">选中全部<strong data-mark=component_opportunityList_count></strong>条数据</a><a href="javascript:;" class="cancel_all">取消选择全部</a>）</span>
+                        <a href="javascript:;" class="action" data-model="opportunity">变更负责人</a>
+                    </div>
+                    <table id="dataTables_opportunity" data-all='0' class="hover row-border" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th width="16"><span class="checkbox"></span></th>
+                                <th data-sortName="ORDER[NAME]">名称</th>
+                                <th>客户</th>
+                                <th>负责人</th>
+                                <th data-sortName="ORDER[PRICE]">金额</th>
+                                <th data-sortName="ORDER[DATE_DEAL_PREDICT]">预计成交日期</th>
+                                <th data-sortName="ORDER[STATE]">销售阶段</th>
+                                <th data-sortName="ORDER[STATE]">赢率</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="loading"><td colspan="8">正在加载...</td></tr>
+                        </tbody>
+                    </table>      
+                </div>
+            </div>
+        </div>
+        <div class="panel_right">
+            <div class="panel_wrapper favorite">
+                <div class="title">业务漏斗</div>
+                <div id="opportunity_funnel" class="content content_padding_head" style="height:200px;">
+                </div>
+            </div>
+            <div class="panel_wrapper favorite">
+                <div class="title">未跟进业务</div>
+                <div id="opportunity_bar" class="content content_padding_head" style="height:200px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

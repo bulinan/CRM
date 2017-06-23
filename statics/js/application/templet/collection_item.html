@@ -1,0 +1,12 @@
+<tr data-id="{{this.ID}}">
+    <td>
+        <a href="javascript:;" class="load" data-name="{{this.NAME}}" data-method="file_item.init">
+            <span class="icon_file"></span>
+            <span>{{this.NAME}}</span>
+        </a>
+    </td>
+    <td>{{size this.SIZE}}</td>
+    <td>{{creator this.RELATION.CREATOR}}</td>
+    <td>{{create_time this.CREATED}}</td>
+    <td style="width: 10%"><a href="javascript:;" data-method="file.collection_delete" style="display: none">删除</a></td>
+</tr>

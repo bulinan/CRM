@@ -1,0 +1,61 @@
+<div id="task">
+    <div class="task_container">
+        <div class="selector" data-callback="dashboard.component_year_select">
+            <div class="selector_title"><span class="text"></span><span class="icon-arrow-small-down"></span></div>
+            <ul class="selector_list"></ul>
+        </div>
+        <div class="target">
+            <span class="who">我</span>
+            <span class="year"></span> 年度任务目标是￥ <input type="text" name="year_goal" class="input"> 元
+            <a href="javascript:;" class="average" data-method="dashboard.task_average">平均分配到每个月</a>
+        </div>
+        <div class="quarters">
+            <div class="quarter">
+                <table>
+                    <thead><tr><th>第一季度</th><th class="right">￥ <input type="text" class="input" name="first_quarter"> 元</th></tr></thead>
+                    <tbody>
+                        <tr><td><span class="year"></span>年1月</td><td class="right">￥ <input type="text" class="input" name="january"> 元</td></tr>
+                        <tr><td><span class="year"></span>年2月</td><td class="right">￥ <input type="text" class="input" name="february"> 元</td></tr>
+                        <tr><td><span class="year"></span>年3月</td><td class="right">￥ <input type="text" class="input" name="march"> 元</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="quarter">
+                <table>
+                    <thead><tr><th>第二季度</th><th class="right">￥ <input type="text" class="input" name="second_quarter"> 元</th></tr></thead>
+                    <tbody>
+                        <tr><td><span class="year"></span>年4月</td><td class="right">￥ <input type="text" class="input" name="april"> 元</td></tr>
+                        <tr><td><span class="year"></span>年5月</td><td class="right">￥ <input type="text" class="input" name="may"> 元</td></tr>
+                        <tr><td><span class="year"></span>年6月</td><td class="right">￥ <input type="text" class="input" name="june"> 元</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="quarter">
+                <table>
+                    <thead><tr><th>第三季度</th><th class="right">￥ <input type="text" class="input" name="third_quarter"> 元</th></tr></thead>
+                    <tbody>
+                        <tr><td><span class="year"></span>年7月</td><td class="right">￥ <input type="text" class="input" name="july"> 元</td></tr>
+                        <tr><td><span class="year"></span>年8月</td><td class="right">￥ <input type="text" class="input" name="august"> 元</td></tr>
+                        <tr><td><span class="year"></span>年9月</td><td class="right">￥ <input type="text" class="input" name="september"> 元</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="quarter">
+                <table>
+                    <thead><tr><th>第四季度</th><th class="right">￥ <input type="text" class="input" name="fourth_quarter"> 元</th></tr></thead>
+                    <tbody>
+                        <tr><td><span class="year"></span>年10月</td><td class="right">￥ <input type="text" class="input" name="october"> 元</td></tr>
+                        <tr><td><span class="year"></span>年11月</td><td class="right">￥ <input type="text" class="input" name="november"> 元</td></tr>
+                        <tr><td><span class="year"></span>年12月</td><td class="right">￥ <input type="text" class="input" name="december"> 元</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="operation">
+            <div class="actions button-group">
+                <button class="button" data-method="dashboard.task_edit_submit">确定</button>
+                <button class="button cancel" data-method="dashboard.task_close">取消</button>
+            </div>
+        </div>
+    </div>
+</div>

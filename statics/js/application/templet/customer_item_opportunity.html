@@ -1,0 +1,28 @@
+<div class="panel_full">
+    <div class="panel_wrapper item">
+        <div class="title">业务机会<a class="button right new" href="javascript:;" data-method="customer_item.opportunity_new">新建业务机会</a></div>
+        <table class="hover row-border dataTable no-footer">
+            <thead><tr><th>名称</th><th>负责人</th><th>金额</th><th>预计成交日期</th><th>销售阶段</th><th>赢率</th><th>操作</th></tr></thead>
+            <tbody>
+                {{#if this.length}}
+                    {{#each this}}
+                        <tr data-id="{{this.ID}}" data-model="customer" data-method="opportunity_item.init">
+                            <td class="label_black">{{this.NAME}}</td>
+                            <td class="label_black">{{owner this.RELATION.OWNER}}</td>
+                            <td>{{this.PRICE}}</td>
+                            <td>{{this.DATE_DEAL_PREDICT}}</td>
+                            <td>{{state this.STATE_TEMPLATE this.STATE}}</td>
+                            <td>{{this.STATE}}%</td>
+                            {{#is_all this.RELATION.OWNER}}
+                                <td><a href="javascript:;" class="delete" data-method="customer_item.opportunity_delete">删除</a></td>
+                            {{else}}
+                                <td></td>
+                            {{/is_all}}</tr>
+                    {{/each}}
+                {{else}}
+                    <tr><td colspan="7" class="empty">当前客户下没有获取到业务机会，<a href="javascript:;" data-method="customer_item.opportunity_new">立即新建</a></td></tr>
+                {{/if}}
+            </tbody>
+        </table>
+    </div>
+</div>

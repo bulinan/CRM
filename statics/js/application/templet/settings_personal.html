@@ -1,0 +1,53 @@
+<div id="settings" class="main scroll">
+    <div class="container">
+        <div class="panel_full">
+            <div class="panel_wrapper">
+                <div class="title">个人设置</div>
+                <div class="content content_padding_head">
+                    <div class="section">
+                        <p>
+                            <a href="javascript:;">
+                                <img class="avatar" src="{{USER_HEAD}}">
+                                <input type="hidden" name="user_head" value="" />
+                            </a>
+                            你可以选择png/jpg图片作为头像（上传后需点击下方确认按钮，进行修改头像）
+                        </p>
+                        <a class="button">
+                            修改头像
+                            <form class="head_upload" action="/api/file/upload" method="post" enctype="multipart/form-data">
+                                <input type="hidden" name="API_TOKEN" value="{{USER_HEAD}}">
+                                <input type="hidden" name="RELATION[COLLECTION]" value="ROOT">
+                                <input class="head" type="file" name="FILE" data-method="settings_personal.head_upload"/>
+                            </form>
+                        </a>
+                    </div>
+                    <div class="section">
+                        <h2>修改个人资料</h2>
+                        <ul>
+                            <li><label>姓名：</label><div><input class="input" name="user_name" type="text" placeholder="姓名" value="{{USER_NAME}}"></div></li>
+                            <li><label>职位：</label><div><input class="input" name="user_title" type="text" placeholder="职位" value="{{USER_TITLE}}"></div></li>
+                            <li><label>邮箱：</label><div><input class="input" name="user_email" type="text" placeholder="邮箱" value="{{USER_EMAIL}}"></div></li>
+                        </ul>
+                    </div>
+                    <div class="section">
+                        <h2>修改密码</h2>
+                        <ul>
+                            <li><label>原密码：</label><div><input class="input" name="old_password" type="password" placeholder="原密码"></div></li>
+                            <li><label>新密码：</label><div><input class="input" name="new_password" type="password" placeholder="新密码"></div></li>
+                            <li><label>重复密码：</label><div><input class="input" name="repeat_password" type="password" placeholder="再重复一次"></div></li>
+                            <li style="display: none" class="error_tip">
+                                <label></label>
+                                <div><div class="message error"></div></div>
+                            </li>
+                            <li style="display: none" class="success_tip">
+                                <label></label>
+                                <div><div class="message success"></div></div>
+                            </li>
+                            <li><label></label><div><button class="button" data-method="settings_personal.settings_personal_submit">确认修改</button></div></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

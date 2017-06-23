@@ -1,0 +1,27 @@
+<div class="panel_full">
+    <div class="panel_wrapper item">
+        <div class="title">日程安排<a class="button right new" href="javascript:;" data-model="opportunity_item" data-method="customer_item.todo_new">添加日程安排</a></div>
+        <table class="hover row-border dataTable no-footer">
+            <thead><tr><th>名称</th><th>状态</th><th>截至时间</th><th>创建者</th><th>操作</th></tr></thead>
+            <tbody>
+                {{#if this.length}}
+                    {{#each this}}
+                        <tr data-id="{{this.ID}}" data-content="{{content this}}">
+                            <td class="label_black">{{this.NAME}}</td>
+                            <td class="label_black">{{done this.DONE}}</td>
+                            <td >{{deadline this.DATE}}</td>
+                            <td>{{owner this.RELATION.OWNER}}</td>
+                            {{#is_all this.RELATION.OWNER}}
+                                <td><a href="javascript:;" data-self="1" data-model="opportunity_item" data-method="customer_item.todo_edit">编辑</a> <a href="javascript:;" data-method="opportunity_item.todo_delete">删除</a></td>
+                            {{else}}
+                                <td><a href="javascript:;" data-self="0" data-model="opportunity_item" data-method="customer_item.todo_edit">查看</a></td>
+                            {{/is_all}}
+                    {{/each}}
+                {{else}}
+                    <tr><td colspan="5" class="empty">当前客户下没有获取到日程安排，<a href="javascript:;" data-model="opportunity_item" data-method="customer_item.todo_new">立即新建</a></td></tr>
+                {{/if}}
+            </tbody>
+        </table>
+    </div>
+</div>
+

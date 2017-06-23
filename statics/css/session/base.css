@@ -1,0 +1,255 @@
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+menu,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  list-style: none;
+}
+html,
+body,
+input,
+select {
+  background: #fff;
+  font: 12px/1.2 "Segoe UI", Tahoma;
+  margin: 0;
+  color: #333;
+  outline: 0;
+}
+select::-ms-expand {
+  display: none;
+}
+.input,
+.textarea,
+select,
+.error {
+  margin: 0;
+  width: 280px;
+  padding: 8px 10px;
+  display: block;
+  line-height: 20px;
+  color: #212121;
+  background: #fefefe;
+  border: 1px solid #bababa;
+  outline: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.input:hover,
+.textarea:hover,
+select:hover,
+.error:hover {
+  border-color: #8F8F8F;
+}
+.input:active,
+.textarea:active,
+select:active,
+.error:active,
+.input:focus,
+.textarea:focus,
+select:focus,
+.error:focus {
+  background: #fff;
+  border-color: #5C5C5C;
+}
+.select {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+.select:before,
+.select:after {
+  content: '';
+  position: absolute;
+  right: 13px;
+  width: 0;
+  height: 0;
+  border-left: 3px outset transparent;
+  border-right: 3px outset transparent;
+}
+.select:before {
+  top: 14px;
+  border-bottom: 3px solid #000;
+}
+.select:after {
+  top: 20px;
+  border-top: 3px solid #000;
+}
+.select select {
+  padding-top: 7px;
+  padding-left: 7px;
+}
+.input {
+  padding: 10px;
+  line-height: normal;
+}
+a {
+  text-decoration: none;
+  color: #2672ec;
+  vertical-align: baseline;
+  cursor: pointer;
+}
+a:hover {
+  text-decoration: underline;
+}
+.button {
+  display: block;
+  border: 1px solid #2672ec;
+  height: 32px;
+  line-height: 26px !important;
+  cursor: pointer;
+  width: 100px;
+  text-align: center;
+  text-decoration: none !important;
+  background: #2672ec;
+  color: #fff;
+}
+.button:hover {
+  background: #5a94f1;
+  border-color: #5a94f1;
+}
+#container {
+  *zoom: 1;
+  width: 980px;
+  margin: 8.5% auto 0 auto;
+}
+#container:before,
+#container:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+#container:after {
+  clear: both;
+}
+#side {
+  float: left;
+  width: 475px;
+}
+#side .wrapper {
+  background: #00a1e9 url('../../img/session.jpg') no-repeat;
+  height: 490px;
+}
+#side .wrapper h1 {
+  font-size: 20px;
+  font-weight: normal;
+  font-family: "wf_SegoeUILight", "wf_SegoeUI", "Segoe UI Light", "Segoe WP Light", "Segoe UI", "Segoe", "Segoe WP", "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica", "Tahoma", "Verdana", "Arial", "sans-serif";
+  color: #fff;
+  padding: 25px 0 0 25px;
+}
+#content {
+  float: right;
+  width: 420px;
+}
+#content h1 {
+  font-size: 28px;
+  font-weight: normal;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  color: #333;
+}
+#content h2 {
+  font-weight: normal;
+  width: 350px;
+  line-height: 1.5em;
+}
+#content h2 a {
+  color: #333;
+}
+#content form {
+  margin-top: 39px;
+}
+#content form select {
+  width: 302px;
+  height: 37px;
+}
+#content form .input {
+  margin-bottom: 10px;
+}
+#content form .select {
+  margin-bottom: 7px;
+}
+#content form .button {
+  margin-top: 20px;
+  line-height: normal;
+}
+#content .line {
+  margin-top: 38px;
+}
+#content .line span {
+  display: block;
+  margin-bottom: 12px;
+}
+#content .error {
+  margin-bottom: 10px;
+  color: #a94442;
+  background-color: #FAF4F4;
+  border-color: #ebccd1;
+}

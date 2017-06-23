@@ -1,0 +1,32 @@
+<div id="file" class="main scroll">
+    <div class="container">
+        <div class="panel_full">
+            <div class="panel_wrapper">
+                <div class="title">文件管理
+                    <div class="handler">
+                        <div class="actions button-group">
+                            <button class="button" data-model="file" data-method="file.file_new">创建</button>
+                            <a class="button">
+                                上传文件
+                                <form class="file_upload" action="/api/file/upload" method="post" enctype="multipart/form-data">
+                                    <input type="hidden" name="API_TOKEN" value="" />
+                                    <input type="hidden" name="RELATION[COLLECTION]" value="ROOT" />
+                                    <input class="new_file" type="file" name="FILE" data-method="bootstrap.component_file_upload" />
+                                </form>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content content_padding_none">
+                    <table class="hover row-border dataTable file">
+                        <thead>
+                            <tr><th>名称</th><th>大小</th><th>创建者</th><th>更新时间</th><th>操作</th></tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

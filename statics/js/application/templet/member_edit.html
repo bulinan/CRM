@@ -1,0 +1,37 @@
+<div id="component_popup" class="model">
+    <div class="title">
+        <ul class="list"><li>基本资料</li></ul>
+    </div>
+    <div class="content">
+        <div class="operation">
+            <div class="actions button-group">
+                <button class="button" data-method="settings_system.member_edit_submit">保存</button>
+                <button class="button cancel" data-method="bootstrap.component_popup_close">取消</button>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <label>名称<span class="red">*</span></label>
+                <div class="area">
+                    <input type="text" name="member_name" placeHolder="请填写成员姓名" value="{{this.NAME}}">
+                    <input type="hidden" name="member_id" value="{{this.ID}}">
+                    <input type="hidden" name="member_head" value="{{this.HEAD}}">
+                </div>
+            </li>
+            <li><label>手机<span class="red">*</span></label><div class="area"><input type="text" name="member_phone" placeHolder="请填写手机号码" value="{{this.PHONE}}"></div></li>
+            <li data-mark="group">
+                <label>部门<span class="red">*</span></label>
+                <div class="area">
+                    <div class="selector">
+                        <div class="selector_title" data-value="{{this.RELATION.GROUP}}"><span class="text"></span><span class="icon-arrow-small-down"></span></div>
+                        <ul class="selector_list"></ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul>
+            <li><label>邮箱</label><div class="area"><input type="text" name="member_email" placeHolder="请填写电子邮箱地址" value="{{this.EMAIL}}"></div></li>
+            <li><label>职位</label><div class="area"><input type="text" name="member_title" placeHolder="请填写职位" value="{{this.TITLE}}"></div></li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>重置密码 - AirTeams</title>
+        <link href="/statics/css/session/base.css" rel="stylesheet">
+        <script src="/statics/js/lib/jquery.min.js"></script>
+        <script>
+            var bootstrap_submit = function (_el) {
+                var params = {
+                    'ACCOUNT_ID': $('input[name=ACCOUNT_ID]').val(),
+                    'USER_PHONE': $('input[name=USER_PHONE]').val()
+                };
+                if (params.ACCOUNT_ID == '') {
+                    component_error($(_el), '请输入您的企业帐号');
+                    return false;
+                }
+                if (params.USER_PHONE == '') {
+                    component_error($(_el), '请输入您的手机号码');
+                    return false;
+                }else{
+                    if(!/^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/.test(params.USER_PHONE)){
+                        component_error($(_el), '请输入正确的手机号码');
+                        return false;
+                    }
+                }
+            };
+            var component_error = function (_object, _message) {
+                _object.find('.error').remove();
+                _object.prepend('<div class="error">' + _message + '</div>');
+                return false;
+            };
+        </script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="side"><div class="wrapper"><h1>AirTeams CRM</h1></div></div>
+            <div id="content">
+                <h1>重置密码</h1>
+                <h2>请输入您注册时所填写的邮件地址，我们会将密码重置邮件发送到您的邮箱中。</h2>
+                <form method="post" onsubmit="return bootstrap_submit(this)">
+                    <input class="input" name="ACCOUNT_ID" placeholder="您的企业帐号" type="text">
+                    <input class="input" name="USER_PHONE" placeholder="您的手机号码" type="text">
+                    <input class="button form" value="提交" type="submit">
+                </form>
+                <p class="line">
+                    <a class="line" href="/login">&larr; 返回登录</a>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

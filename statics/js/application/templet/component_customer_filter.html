@@ -1,0 +1,34 @@
+<div id="component_filter">
+    <div class="actions button-group">
+        <button class="button" data-method="customer.component_filter_submit">确定</button>
+        <button class="button cancel" data-method="bootstrap.component_filter_close">取消</button>
+    </div>
+    <div class="search">
+        <span class="icon icon-search"></span>
+        <input type="text" class="input" name="customer_name" placeholder="搜素客户...">
+    </div>
+    <div class="level inline">
+        <div class="selector">
+            <div class="selector_title">
+                <span class="select_label">客户级别</span>
+                <span class="text">不限</span>
+                <span class="icon-arrow-small-down"></span>
+            </div>
+            <ul class="selector_list" data-window="false"></ul>
+        </div>
+    </div>
+    <div class="opportunity inline">
+        <div class="selector">
+            <div class="selector_title">
+                <span class="select_label">是否存在业务机会</span>
+                <span class="text">不限</span>
+                <span class="icon-arrow-small-down"></span>
+            </div>
+            <ul class="selector_list" data-window="false">
+                <li class="selected">不限</li>
+                <li data-value="0">否</li>
+                <li data-value="1">是</li>
+            </ul>
+        </div>
+    </div>
+</div>

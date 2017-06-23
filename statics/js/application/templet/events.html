@@ -1,0 +1,24 @@
+{{#each this}}
+    <li>
+        <div class="head"><a href="javascript:;"><img src="{{head this.RELATION.CREATOR}}"></a></div>
+        <div class="message">
+            <div class="message_title">
+                <span class="creator">{{creator this.RELATION.CREATOR}}</span> <span class="action">{{action this.NAME}}</span>
+                {{#if this.PARAMS.DELETED}}
+                    <a href="javascript:;">{{this.PARAMS.NAME}}</a>
+                {{else}}
+                    {{#compare this.PARAMS.MODEL}}
+                        <a href="javascript:;" data-model="opportunity" data-id="{{id this.PARAMS.MODEL this}}" data-method="{{method this.PARAMS.MODEL}}">{{this.PARAMS.NAME}}</a>
+                    {{else}}
+                        {{#filter this.PARAMS.MODEL}}
+                            <a href="javascript:;" data-id="{{id this.PARAMS.MODEL this}}">{{this.PARAMS.NAME}}</a>
+                        {{else}}
+                            <a href="javascript:;" data-id="{{id this.PARAMS.MODEL this}}" data-method="{{method this.PARAMS.MODEL}}">{{this.PARAMS.NAME}}</a>
+                        {{/filter}}
+                    {{/compare}}
+                {{/if}}
+            </div>
+        </div>
+        <span class="time">{{time this.CREATED}}</span>
+    </li>
+{{/each}}

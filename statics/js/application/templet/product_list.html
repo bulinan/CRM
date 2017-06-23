@@ -1,0 +1,21 @@
+<div class="title">请选择产品（可多选）</div>
+<div class="content list">
+    <table class="hover row-border dataTable no-footer">
+        <thead><tr><th><span class="checkbox"></span></th><th>名称</th><th>价格</th><th>单位</th></tr></thead>
+        <tbody>
+            {{#if this.length}}
+                {{#each this}}
+                    <tr data-id="{{this.ID}}"><td><span class="checkbox"></span></td><td>{{this.NAME}}</td><td>{{this.PRICE}}</td><td>{{this.UNIT_QUANTITY}}</td></tr>
+                {{/each}}
+            {{else}}
+                <tr><td colspan="4" class="empty">产品列表为空</td></tr>
+            {{/if}}
+        </tbody>
+    </table>
+</div>
+<div class="footer">
+    <div class="actions button-group">
+        <button class="button" data-method="opportunity_item.product_select_submit">确定</button><button class="button cancel" data-method="bootstrap.item_add_close">取消</button>
+    </div>
+</div>
+

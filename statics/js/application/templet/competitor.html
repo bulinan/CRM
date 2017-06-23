@@ -1,0 +1,45 @@
+<div id="competitor" class="main scroll">
+    <div class="container">
+        <div class="panel_full">
+            <div class="panel_wrapper">
+                <div class="title">
+                    <a class="button new" href="javascript:;" data-method="competitor.competitor_new">新建竞争对手</a>
+                    <div class="scale">
+                        <div class="selector" data-callback="competitor.component_selector_scale">
+                            <div class="selector_title">
+                                <span class="select_label">对手规模</span>
+                                <span class="text">不限</span>
+                                <span class="icon-arrow-small-down"></span>
+                            </div>
+                            <ul class="selector_list" data-window="false"></ul>
+                        </div>
+                    </div>
+                    <div class="level">
+                        <div class="selector" data-callback="competitor.component_selector_level">
+                            <div class="selector_title">
+                                <span class="select_label">对手级别</span>
+                                <span class="text">不限</span>
+                                <span class="icon-arrow-small-down"></span>
+                            </div>
+                            <ul class="selector_list" data-window="false"></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="content content_padding_none">
+                    <table id="dataTables_competitor" class="hover row-border" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th><span class="checkbox"></span></th>
+                                <th data-sortName="ORDER[NAME]">名称</th>
+                                <th data-sortName="ORDER[LEVEL]">对手级别</th>
+                                <th data-sortName="ORDER[SCALE]">对手规模</th>
+                                <th>创建人</th>
+                                <th data-sortName="ORDER[CREATED]">创建时间</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

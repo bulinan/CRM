@@ -1,0 +1,57 @@
+<div id="payment_item" class="main scroll">
+    <div class="container">
+        <div class="panel_full">
+            <div class="panel_wrapper">
+                <div class="basic border_bottom_none">
+                    <i class="payment">Pa</i>
+                    <div class="content">
+                        <h1><span></span> @<a href="javascript:;" class="customer" data-id="{{this.RELATION.CUSTOMER.ID}}" data-method="customer_item.init">{{this.RELATION.CUSTOMER.NAME}}</a></h1>
+                        <p>目前由<a href="javascript:;" class="owner"></a>负责</p>
+                    </div>
+                    <div class="actions button-group">
+                        {{#is_auth this.RELATION.OWNER}}
+                        <a href="javascript:;" data-model="payment_item" data-method="bootstrap.owner_change" class="button">变更负责人</a>
+                        <a href="javascript:;" data-method="payment_item.payment_edit" class="button">修改该数据</a>
+                        <a href="javascript:;" data-method="payment_item.payment_delete" class="button cancel">删除该数据</a>
+                        {{else}}
+                        <a href="javascript:;" data-model="payment_item" data-method="bootstrap.owner_change" class="button">变更负责人</a>
+                        {{/is_auth}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="itemSpace">
+            <div class="panel_full">
+                <div class="panel_wrapper contract">
+                    <div class="title">基本信息</div>
+                    <div class="content">
+                        <div class="inner_left">
+                            <ul class="border_bottom">
+                                <li><span class="key">回款名称</span><span>{{this.NAME}}</span></li>
+                                <li><span class="key">总金额</span><span>{{this.PRICE}}元</span></li>
+                            </ul>
+                            <ul class="border_bottom">
+                                <li><span class="key">状态</span><span>{{state this.STATE}}</span></li>
+                            </ul>
+                            <ul class="border_bottom">
+                                <li><span class="key">付款方式</span><span>{{type this.TYPE}}</span></li>
+                            </ul>
+                            <ul>
+                                <li><span class="key">描述</span><span>{{this.REMARK}}</span></li>
+                            </ul>
+                        </div>
+                        <div class="inner_right">
+                            <ul>
+                                <li><span class="key">回款负责人</span><span>{{people this.RELATION.OWNER}}</span></li>
+                                <li><span class="key">创建人</span><span>{{people this.RELATION.CREATOR}}</span></li>
+                                <li><span class="key">创建时间</span><span>{{date this.CREATED}}</span></li>
+                                <li><span class="key">最后修改人</span><span>{{people this.RELATION.EDITOR}}</span></li>
+                                <li><span class="key">最后修改时间</span><span>{{date this.UPDATED}}</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+ {{#each this}}
+    <li>
+        <em>{{model this.MODEL}}</em>
+        {{#if this.PARAMS.DELETED}}
+            <a href="javascript:;">{{this.NAME}}</a>
+        {{else}}
+            <a href="javascript:;" data-id="{{modelId this}}" data-method="{{method this.MODEL}}">{{this.NAME}}</a>
+        {{/if}}
+        <span>{{time this.CREATED}}</span>
+    </li>
+{{/each}}

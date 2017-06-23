@@ -1,0 +1,27 @@
+{{#each this}}
+    {{#judge this.TYPE}}
+        {{#modelClass this.RELATION.MODEL}}
+            {{#if this.USER_SELF}}
+                <li class="self" data-owner="{{this.RELATION.OWNER}}" data-type="todo" data-id="{{this.ID}}" data-model="CALENDAR" data-name="{{this.NAME}}" data-self="{{this.USER_SELF}}" data-remark="{{this.REMARK}}" data-done="{{this.DONE}}" data-year="{{this.YEAR}}" data-month="{{this.MONTH}}" data-day="{{this.DAY}}" data-deadline="{{this.DATE}}" data-method="calendar.calendar_todo_show">{{checkboxDone this.DONE}}<span class="name {{textDone this.DONE}}">{{this.NAME}}</span></li>
+            {{else}}
+                {{#is_administrator this.USER_PHONE}}
+                    <li class="todo" data-owner="{{this.RELATION.OWNER}}" data-type="todo" data-id="{{this.ID}}" data-model="CALENDAR" data-name="{{this.NAME}}" data-self="1" data-remark="{{this.REMARK}}" data-done="{{this.DONE}}" data-year="{{this.YEAR}}" data-month="{{this.MONTH}}" data-day="{{this.DAY}}" data-deadline="{{this.DATE}}" data-method="calendar.calendar_todo_show">{{checkboxDone this.DONE}}<span class="name {{textDone this.DONE}}">{{this.USER_NAME}}：{{this.NAME}}</span></li>
+                {{else}}
+                    <li class="todo" data-owner="{{this.RELATION.OWNER}}" data-type="todo" data-id="{{this.ID}}" data-model="CALENDAR" data-name="{{this.NAME}}" data-self="{{this.USER_SELF}}" data-remark="{{this.REMARK}}" data-done="{{this.DONE}}" data-year="{{this.YEAR}}" data-month="{{this.MONTH}}" data-day="{{this.DAY}}" data-deadline="{{this.DATE}}" data-method="calendar.calendar_todo_show">{{otherCheckboxDone this.DONE}}<span class="name {{textDone this.DONE}}">{{this.USER_NAME}}：{{this.NAME}}</span></li>
+                {{/is_administrator}}
+            {{/if}}
+        {{else}}
+            {{#if this.USER_SELF}}
+                <li class="self" data-owner="{{this.RELATION.OWNER}}" data-type="todo" data-id="{{this.ID}}" data-model="{{this.RELATION.MODEL}}" data-parentid="{{modelID this}}" data-parentname="{{modelName this}}" data-name="{{this.NAME}}" data-self="{{this.USER_SELF}}" data-remark="{{this.REMARK}}" data-done="{{this.DONE}}" data-year="{{this.YEAR}}" data-month="{{this.MONTH}}" data-day="{{this.DAY}}" data-deadline="{{this.DATE}}" data-method="calendar.calendar_todo_show">{{checkboxDone this.DONE}}<span class="name {{textDone this.DONE}}">{{modelName this}} {{this.NAME}}</span></li>
+            {{else}}
+                {{#is_administrator this.USER_PHONE}}
+                    <li class="todo" data-owner="{{this.RELATION.OWNER}}" data-type="todo" data-id="{{this.ID}}" data-model="{{this.RELATION.MODEL}}" data-parentid="{{modelID this}}" data-parentname="{{modelName this}}" data-name="{{this.NAME}}" data-self="1" data-remark="{{this.REMARK}}" data-done="{{this.DONE}}" data-year="{{this.YEAR}}" data-month="{{this.MONTH}}" data-day="{{this.DAY}}" data-deadline="{{this.DATE}}" data-method="calendar.calendar_todo_show">{{checkboxDone this.DONE}}<span class="name {{textDone this.DONE}}">{{this.USER_NAME}}：{{modelName this}} {{this.NAME}}</span></li>
+                {{else}}
+                    <li class="todo" data-owner="{{this.RELATION.OWNER}}" data-type="todo" data-id="{{this.ID}}" data-model="{{this.RELATION.MODEL}}" data-parentid="{{modelID this}}" data-parentname="{{modelName this}}" data-name="{{this.NAME}}" data-self="{{this.USER_SELF}}" data-remark="{{this.REMARK}}" data-done="{{this.DONE}}" data-year="{{this.YEAR}}" data-month="{{this.MONTH}}" data-day="{{this.DAY}}" data-deadline="{{this.DATE}}" data-method="calendar.calendar_todo_show">{{otherCheckboxDone this.DONE}}<span class="name {{textDone this.DONE}}">{{this.USER_NAME}}：{{modelName this}} {{this.NAME}}</span></li>
+                {{/is_administrator}}
+            {{/if}}
+        {{/modelClass}}
+    {{else}}
+        <li data-type="date" data-method="calendar.calendar_date_show"><span class="model_name" data-id="{{modelID this}}">{{object this.RELATION}}：</span><span class="name">{{this.NAME}}</span></li>
+    {{/judge}}
+{{/each}}

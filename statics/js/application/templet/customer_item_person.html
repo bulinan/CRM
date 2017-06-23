@@ -1,0 +1,26 @@
+<div class="panel_full">
+    <div class="panel_wrapper item">
+        <div class="title">联系人<a class="button right new" href="javascript:;" data-mark="person_new" data-method="customer_item.person_new">新建联系人</a></div>
+        <table class="hover row-border dataTable no-footer">
+            <thead><tr><th>姓名</th><th>电话</th><th>部门</th><th>职位</th><th>操作</th></tr></thead>
+            <tbody>
+                {{#if this.length}}
+                    {{#each this}}
+                        <tr data-id="{{this.ID}}" data-method="person_item.init">
+                            <td class="label_black">{{this.VERSION.CURRENT.NAME}}</td>
+                            <td class="label_black">{{phone this.VERSION.CURRENT.CONTACT}}</td>
+                            <td>{{this.VERSION.CURRENT.DEPARTMENT}}</td>
+                            <td>{{this.VERSION.CURRENT.TITLE}}</td>
+                            {{#is_all this.RELATION.CUSTOMER.OWNER}}
+                                <td><a href="javascript:;" data-method="customer_item.person_delete">删除</a></td>
+                            {{else}}
+                                <td></td>
+                            {{/is_all}}</tr>
+                    {{/each}}
+                {{else}}
+                    <tr><td colspan="5" class="empty">当前客户下没有获取到联系人，<a href="javascript:;" data-mark="person_new" data-method="customer_item.person_new">立即新建</a></td></tr>
+                {{/if}}
+            </tbody>
+        </table>
+    </div>
+</div>

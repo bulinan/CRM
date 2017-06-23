@@ -1,0 +1,27 @@
+<div class="header">
+    <h1><i class="calendar"></i>日程安排</h1>
+    <ul class="select_date">
+        <li><a class="today" href="javascript:;" data-method="calendar.component_today">今天</a></li>
+        <li><a href="javascript:;" data-method="calendar.component_last_month"><span class="icon-arrow-small-left"></span></a></li>
+        <li><a class="current" href="javascript:;"><strong class="year">2014</strong>年<strong class="month">8</strong>月</a></li>
+        <li><a href="javascript:;" data-method="calendar.component_next_month"><span class="icon-arrow-small-right"></span></a></li>
+    </ul>
+    {{#is_charge USER_ID}}
+        <span class="user" data-user="{{USERS}}" data-model="calendar" data-method="bootstrap.component_user_filter">所有人</span>
+    {{else}}
+        <span class="user">{{USER_NAME}}</span>
+    {{/is_charge}}
+</div>
+<div id="calendar" class="main workspace_header scroll">
+    <div class="container">
+        <div class="panel_full">
+            <div class="panel_wrapper calendar">
+                <table id="calendar_table">
+                    <thead></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="component_popup"></div>

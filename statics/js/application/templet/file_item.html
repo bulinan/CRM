@@ -1,0 +1,12 @@
+<tr data-id="{{this.ID}}">
+    <td>
+        <a href="javascript:;" class="load">
+            <span class="file">{{file_type this.NAME}}</span>
+            <span>{{this.NAME}}</span>
+        </a>
+    </td>
+    <td>{{size this.SIZE}}</td>
+    <td>{{creator this.RELATION.CREATOR}}</td>
+    <td>{{create_time this.CREATED}}</td>
+    <td style="width: 10%"><a href="javascript:;" data-method="file.file_delete" style="display: none">删除</a><a href="javascript:;" class="file_download" target="_blank" data-method="bootstrap.component_file_download" style="display: none">下载</a></td>
+</tr>

@@ -1,0 +1,25 @@
+<div id="lead_item" class="main scroll">
+    <div class="container">
+        <div class="panel_full">
+            <div class="panel_wrapper">
+                <div class="basic border_bottom_none">
+                    <i class="lead">Le</i>
+                    <div class="content">
+                        <h1></h1>
+                        <p>目前由 <a href="javascript:;" class="owner"></a> 负责</p>
+                    </div>
+                    <div class="actions button-group">
+                        {{#is_all this.RELATION.OWNER}}<a href="javascript:;" data-method="lead_item.lead_convert" class="button">转化为客户</a>
+                        <a href="javascript:;" data-model="lead_item" data-method="bootstrap.owner_change" class="button">变更负责人</a>
+                        <a href="javascript:;" data-method="lead_item.lead_edit" class="button">修改该数据</a>
+                        <a href="javascript:;" data-method="lead_item.lead_delete" class="button cancel">删除该数据</a>
+                        {{else}}
+                        <a href="javascript:;" data-model="lead_item" data-method="bootstrap.owner_change" class="button">变更负责人</a>
+                        {{/is_all}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="itemSpace"></div>
+    </div>
+</div>

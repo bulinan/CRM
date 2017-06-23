@@ -1,0 +1,18 @@
+<div class="panel_left top_none">
+    <div class="panel_wrapper step">
+        <div class="content content_padding_head">
+            {{> process_step}}
+        </div>
+    </div>
+</div>
+<div class="panel_right top_none">
+    <div class="panel_wrapper border_bottom_none state">
+        <div class="content content_padding_none">
+            <ul class="list">
+                {{#state this.STATE}}
+                    <li data-id="{{state_id}}" data-method="opportunity_item.state_init">{{state_value}}</li>
+                {{/state}}
+            </ul>
+        </div>
+    </div>
+</div>

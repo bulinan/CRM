@@ -1,0 +1,38 @@
+<div id="component_filter">
+    <div class="actions button-group">
+        <button class="button" data-method="opportunity.component_filter_submit">确定</button>
+        <button class="button cancel" data-method="bootstrap.component_filter_close">取消</button>
+    </div>
+    <div class="search">
+        <span class="icon icon-search"></span>
+        <input type="text" class="input" name="opportunity_name" placeholder="搜素业务机会...">
+    </div>
+    <div class="state inline">
+        <div class="selector">
+            <div class="selector_title">
+                <span class="select_label">业务机会阶段</span>
+                <span class="text">不限</span>
+                <span class="icon-arrow-small-down"></span>
+            </div>
+            <ul class="selector_list scroll" data-window="false"></ul>
+        </div>
+    </div>
+    <div class="time inline">
+        <div class="selector">
+            <div class="selector_title">
+                <span class="select_label">未跟进时长</span>
+                <span class="text">不限</span>
+                <span class="icon-arrow-small-down"></span>
+            </div>
+            <ul class="selector_list" data-window="false">
+                <li class="selected">不限</li>
+                <li data-value="7">7天未跟进</li>
+                <li data-value="15">15天未跟进</li>
+                <li data-value="30">30天未跟进</li>
+                <li data-value="60">60天未跟进</li>
+                <li data-value="90">90天未跟进</li>
+            </ul>
+        </div>
+    </div>
+</div>
+

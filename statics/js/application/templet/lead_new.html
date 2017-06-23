@@ -1,0 +1,46 @@
+<div id="component_popup" class="model">
+    <div class="title">
+        <ul class="list"><li>基本资料</li></ul>
+    </div>
+    <div class="content">
+        <div class="operation">
+            <div class="actions button-group">
+                <button class="button" data-method="lead.lead_new_submit">保存为线索</button>
+                <button class="button cancel" data-method="bootstrap.component_popup_close">取消</button>
+            </div>
+            </div>
+        <ul>
+            <li><label>姓名<span class="red">*</span></label><div class="area"><input type="text" name="lead_name" placeHolder="请填写名称"></div></li>
+            <li><label>公司名称<span class="red">*</span></label><div class="area"><input type="text" name="lead_company" placeHolder="请填写公司名称"></div></li>
+            <li class="multiple"><label>电话<span class="red">*</span></label><div class="area"><input type="text" name="lead_phone" placeHolder="请填写电话"></div></li>
+            <li class="multiple"><label>地址</label><div class="area"><input type="text" name="lead_address" placeHolder="请填写地址"></div></li>
+            <li class="multiple"><label>邮箱</label><div class="area"><input type="text" name="lead_email" placeHolder="请填写邮箱"></div></li>
+            <li class="multiple"><label>即时通讯</label><div class="area"><input type="text" name="lead_im" placeHolder="请填写即时通讯"></div></li>
+            <li class="multiple"><label>网址</label><div class="area"><input type="text" name="lead_site" placeHolder="请填写网址"></div></li>
+            <li class="multiple"><label>社交网络</label><div class="area"><input type="text" name="lead_social" placeHolder="请填写社交网络"></div></li>
+        </ul>
+        <ul>
+            <li data-mark="level">
+                <label>级别</label>
+                <div class="area">
+                    <div class="selector">
+                        <div class="selector_title"><span class="text"></span><span class="icon-arrow-small-down"></span></div>
+                        <ul class="selector_list"></ul>
+                    </div>
+                </div>
+            </li>
+            <li data-mark="state">
+                <label>状态</label>
+                <div class="area">
+                    <div class="selector">
+                        <div class="selector_title"><span class="text"></span><span class="icon-arrow-small-down"></span></div>
+                        <ul class="selector_list"></ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="message">
+            <li><label>备注信息</label><div class="area"><textarea name="lead_remark" placeHolder="请填写备注信息"></textarea></div></li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<ul class="tasks" data-state="{{state}}">
+    {{#if this.length}}
+        {{#each this}}
+            <li data-value="{{this}}">{{this}}</li>
+        {{/each}}
+    {{else}}
+        <li>此销售阶段还没有任何任务</li>
+    {{/if}}
+</ul>

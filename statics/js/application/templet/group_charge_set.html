@@ -1,0 +1,26 @@
+<div id="component_popup" class="model settings">
+    <div class="title">
+        <ul class="list"><li>基本资料</li></ul>
+    </div>
+    <div class="content">
+        <div class="operation">
+            <div class="actions button-group">
+                {{#if this.MEMBER.length}}
+                    <button class="button" data-method="settings_system.charge_set_submit">保存</button>
+                {{/if}}
+                <button class="button cancel" data-method="bootstrap.component_popup_close">取消</button>
+            </div>
+        </div>
+        <ul class="member">
+            {{#if this.MEMBER.length}}
+                {{#each this.MEMBER}}
+                    <li data-id="{{this.ID}}">{{this.NAME}}</li>
+                {{/each}}
+            {{else}}
+                <li>该部门下暂时没有成员</li>
+            {{/if}}
+        </ul>
+        <input type="hidden" name="group_id" value="{{this.ID}}">
+        <input type="hidden" name="group_name" value="{{this.NAME}}">
+    </div>
+</div>

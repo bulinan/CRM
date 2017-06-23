@@ -1,0 +1,27 @@
+<div id="account" class="main scroll">
+    <div class="container">
+        <div class="panel_full">
+            <div class="panel_wrapper">
+                <div class="basic">
+                    <i class="account">Ac</i>
+                    <div class="content">
+                        <h1>{{ACCOUNT_NAME}}</h1>
+                        <p>到期时间为 <span>{{ACCOUNT_EXPIRATION}}</span></p>
+                    </div>
+                    <div class="actions button-group">
+                        <a href="javascript:;" data-method="settings_system.account_set" class="button">账户设置</a>
+                    </div>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li class="active" data-method="settings_system.member_set"><span>成员管理</span></li>
+                        <li class="group" data-method="settings_system.group_set"><span>部门管理</span></li>
+                        <li class="data" data-method="settings_system.data_export"><span>数据导出</span></li>
+                        <li class="product" data-method="settings_system.product_list"><span>产品</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="itemSpace"></div>
+    </div>
+</div>

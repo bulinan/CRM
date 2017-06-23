@@ -1,0 +1,52 @@
+<div id="competitor_item" class="main scroll">
+    <div class="container">
+        <div class="panel_full">
+            <div class="panel_wrapper">
+                <div class="basic border_bottom_none">
+                    <i class="competitor">Co</i>
+                    <div class="content">
+                        <h1><span>{{this.NAME}}</span></h1>
+                    </div>
+                    <div class="actions button-group">
+                        <a href="javascript:;" data-method="competitor_item.competitor_edit" class="button">修改该数据</a>
+                        <a href="javascript:;" data-method="competitor_item.competitor_delete" class="button cancel">删除该数据</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="itemSpace">
+            <div class="panel_full">
+                <div class="panel_wrapper contract">
+                    <div class="title">基本信息</div>
+                    <div class="content">
+                        <div class="inner_left">
+                            <ul class="border_bottom">
+                                <li><span class="key">名称</span><span>{{this.NAME}}</span></li>
+                            </ul>
+                            <ul class="border_bottom">
+                                <li><span class="key">规模</span><span>{{scale this.SCALE}}</span></li>
+                                <li><span class="key">级别</span><span>{{level this.LEVEL}}</span></li>
+                            </ul>
+                            <ul class="border_bottom">
+                                <li><span class="key">优势</span><span>{{this.STRENGTH}}</span></li>
+                                <li><span class="key">劣势</span><span>{{this.WEAKNESS}}</span></li>
+                                <li><span class="key">应对策略</span><span>{{this.STRATEGY}}</span></li>
+                            </ul>
+                            <ul>
+                                <li><span class="key">描述</span><span>{{this.REMARK}}</span></li>
+                            </ul>
+                        </div>
+                        <div class="inner_right">
+                            <ul>
+                                <li><span class="key">创建人</span><span>{{people this.RELATION.CREATOR}}</span></li>
+                                <li><span class="key">创建时间</span><span>{{time this.CREATED}}</span></li>
+                                <li><span class="key">最后修改人</span><span>{{people this.RELATION.EDITOR}}</span></li>
+                                <li><span class="key">最后修改时间</span><span>{{time this.UPDATED}}</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

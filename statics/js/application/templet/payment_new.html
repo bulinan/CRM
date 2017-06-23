@@ -1,0 +1,40 @@
+<div id="component_popup" class="model">
+    <div class="title">
+        <ul class="list"><li>基本资料</li></ul>
+    </div>
+    <div class="content">
+        <div class="operation">
+            <div class="actions button-group">
+                <button class="button" data-method="customer_item.payment_new_submit">保存</button>
+                <button class="button cancel" data-method="bootstrap.component_popup_close">取消</button>
+            </div>
+        </div>
+        <ul>
+            <li><label>回款名称<span class="red">*</span></label><div class="area"><input type="text" name="payment_name" placeHolder="请填写回款名称"></div></li>
+            <li><label>回款金额<span class="red">*</span></label><div class="area"><input type="text" name="payment_price" placeHolder="请填写回款金额"></div></li>
+        </ul>
+        <ul>
+            <li data-mark="state">
+                <label>状态</label>
+                <div class="area">
+                    <div class="selector">
+                        <div class="selector_title"><span class="text"></span><span class="icon-arrow-small-down"></span></div>
+                        <ul class="selector_list"></ul>
+                    </div>
+                </div>
+            </li>
+            <li data-mark="type">
+                <label>付款方式</label>
+                <div class="area">
+                    <div class="selector">
+                        <div class="selector_title"><span class="text"></span><span class="icon-arrow-small-down"></span></div>
+                        <ul class="selector_list"></ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="message">
+            <li><label>备注信息</label><div class="area"><textarea name="payment_remark" placeHolder="请填写备注信息"></textarea></div></li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="panel_full">
+    <div class="panel_wrapper item">
+        <div class="title">部门管理<a href="javascript:;" class="button right new" data-method="settings_system.group_new">添加部门</a></div>
+        <table class="hover row-border dataTable no-footer">
+            <thead><tr><th>名称</th><th>管理员</th><th>现有人数</th><th>操作</th></tr></thead>
+            <tbody>
+                {{#if this.length}}
+                    {{#each this}}
+                        <tr data-id="{{this.ID}}">
+                            <td class="label_black">{{this.NAME}}</td>
+                            <td>{{charge_name this.CHARGE this.MEMBER}}</td>
+                            <td>{{this.MEMBER.length}}</td>
+                            <td>
+                                <a href="javascript:;" data-method="settings_system.group_edit">编辑</a>&nbsp;&nbsp;
+                                <a href="javascript:;" data-method="settings_system.charge_set">设置管理员</a>&nbsp;&nbsp;
+                                <a href="javascript:;" data-method="settings_system.group_delete">删除</a>
+                            </td>
+                        </tr>
+                    {{/each}}
+                {{else}}
+                    <tr><td colspan="4" class="empty">当前账户下还没有任何部门</td></tr>
+                {{/if}}
+            </tbody>
+        </table>
+    </div>
+</div>
+

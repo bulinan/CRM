@@ -1,0 +1,25 @@
+<div class="panel_left top_none">
+    <div class="panel_wrapper event">
+        <div class="title">最近动态</div>
+        <div class="content">
+            <ul></ul>
+        </div>
+    </div>
+</div>
+<div class="panel_right top_none">
+    {{#customer_contract this.RELATION.OWNER this.RELATION.SHARE}}
+        <div class="panel_wrapper contact">
+            <div class="title">联系方式</div>
+            <div class="content content_padding_head">
+                <ul>
+                </ul>
+            </div>
+        </div>
+    {{else}}
+    {{/customer_contract}}
+    <div class="panel_wrapper person">
+        <div class="title">联系人</div>
+        <div class="content content_padding_head">
+        </div>
+    </div>
+</div>

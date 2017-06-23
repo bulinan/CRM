@@ -1,0 +1,9 @@
+ <ul>
+    {{#if this.PRODUCT.length}}
+        {{#each this.PRODUCT}}
+            <li data-id="{{this.ID}}"><a href="javascript:;">{{this.NAME}}</a></li>
+        {{/each}}
+        {{else}}
+        <li><p class="empty">当前机会下没有产品，立即<a href="javascript:;" data-method="opportunity_item.product_add">添加</a></li>
+    {{/if}}
+</ul>

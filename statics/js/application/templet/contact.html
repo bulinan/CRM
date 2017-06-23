@@ -1,0 +1,66 @@
+{{#if this.ADDRESS.length}}
+    {{#each this.ADDRESS}}
+        {{#judge @index ../ADDRESS}}
+            <li class="multiple"><label>地址</label><div class="area"><input type="text" name="contact_address" placeHolder="请填写地址" value="{{this}}"><span class="delete">×</span></div></li>
+        {{else}}
+            <li class="multiple"><label>地址</label><div class="area"><input type="text" name="contact_address" placeHolder="请填写地址" value="{{this}}"><a href="javascript:;" class="onemore">再添加一个</a><span class="delete">×</span></div></li>
+        {{/judge}}
+    {{/each}}
+{{else}}
+    <li class="multiple"><label>地址</label><div class="area"><input type="text" name="contact_address" placeHolder="请填写地址"></div></li>
+{{/if}}
+{{#if this.EMAIL.length}}
+    {{#each this.EMAIL}}
+        {{#judge @index ../EMAIL}}
+            <li class="multiple"><label>邮箱</label><div class="area"><input type="text" name="contact_email" placeHolder="请填写邮箱" value="{{this}}"><span class="delete">×</span></div></li>
+        {{else}}
+            <li class="multiple"><label>邮箱</label><div class="area"><input type="text" name="contact_email" placeHolder="请填写邮箱" value="{{this}}"><a href="javascript:;" class="onemore">再添加一个</a><span class="delete">×</span></div></li>
+        {{/judge}}
+    {{/each}}
+{{else}}
+    <li class="multiple"><label>邮箱</label><div class="area"><input type="text" name="contact_email" placeHolder="请填写邮箱"></div></li>
+{{/if}}
+{{#if this.IM.length}}
+    {{#each this.IM}}
+        {{#judge @index ../IM}}
+            <li class="multiple"><label>即时通讯</label><div class="area"><input type="text" name="contact_im" placeHolder="请填写即时通讯" value="{{this}}"><span class="delete">×</span></div></li>
+        {{else}}
+            <li class="multiple"><label>即时通讯</label><div class="area"><input type="text" name="contact_im" placeHolder="请填写即时通讯" value="{{this}}"><a href="javascript:;" class="onemore">再添加一个</a><span class="delete">×</span></div></li>
+        {{/judge}}
+    {{/each}}
+{{else}}
+    <li class="multiple"><label>即时通讯</label><div class="area"><input type="text" name="contact_im" placeHolder="请填写即时通讯"></div></li>
+{{/if}}
+{{#if this.PHONE.length}}
+    {{#each this.PHONE}}
+        {{#judge @index ../PHONE}}
+            <li class="multiple"><label>电话</label><div class="area"><input type="text" name="contact_phone" placeHolder="请填写电话" value="{{this}}"><span class="delete">×</span></div></li>
+        {{else}}
+            <li class="multiple"><label>电话</label><div class="area"><input type="text" name="contact_phone" placeHolder="请填写电话" value="{{this}}"><a href="javascript:;" class="onemore">再添加一个</a><span class="delete">×</span></div></li>
+        {{/judge}}
+    {{/each}}
+{{else}}
+    <li class="multiple"><label>电话</label><div class="area"><input type="text" name="contact_phone" placeHolder="请填写电话"></div></li>
+{{/if}}
+{{#if this.SITE.length}}
+    {{#each this.SITE}}
+        {{#judge @index ../SITE}}
+            <li class="multiple"><label>网址</label><div class="area"><input type="text" name="contact_site" placeHolder="请填写网址" value="{{this}}"><span class="delete">×</span></div></li>
+        {{else}}
+            <li class="multiple"><label>网址</label><div class="area"><input type="text" name="contact_site" placeHolder="请填写网址" value="{{this}}"><a href="javascript:;" class="onemore">再添加一个</a><span class="delete">×</span></div></li>
+        {{/judge}}
+    {{/each}}
+{{else}}
+    <li class="multiple"><label>网址</label><div class="area"><input type="text" name="contact_site" placeHolder="请填写网址"></div></li>
+{{/if}}
+{{#if this.SOCIAL.length}}
+    {{#each this.SOCIAL}}
+        {{#judge @index ../SOCIAL}}
+            <li class="multiple"><label>社交网络</label><div class="area"><input type="text" name="contact_social" placeHolder="请填写社交网络" value="{{this}}"><span class="delete">×</span></div></li>
+        {{else}}
+            <li class="multiple"><label>社交网络</label><div class="area"><input type="text" name="contact_social" placeHolder="请填写社交网络" value="{{this}}"><a href="javascript:;" class="onemore">再添加一个</a><span class="delete">×</span></div></li>
+        {{/judge}}
+    {{/each}}
+{{else}}
+    <li class="multiple"><label>社交网络</label><div class="area"><input type="text" name="contact_social" placeHolder="请填写社交网络"></div></li>
+{{/if}}
